@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ruleset name="KT Portfolio WordPress Coding Standards">
+    <description>WordPress Coding Standards for KT Portfolio plugin</description>
+
+    <!-- Include WordPress Coding Standards -->
+    <rule ref="WordPress" />
+    <rule ref="WordPress-Docs" />
+    <rule ref="WordPress-Extra" />
+
+    <!-- Exclude patterns -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>tests/*</exclude-pattern>
+    <exclude-pattern>node_modules/*</exclude-pattern>
+    <exclude-pattern>*.min.css</exclude-pattern>
+    <exclude-pattern>*.min.js</exclude-pattern>
+
+    <!-- Custom settings -->
+    <config name="phpcs.tab_width" value="4" />
+    <config name="phpcs.ignore_warnings_on_exit" value="1" />
+    <config name="phpcs.show_progress" value="1" />
+
+    <!-- Allow longer lines for readability in some cases -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120" />
+            <property name="absoluteLineLimit" value="160" />
+        </properties>
+    </rule>
+
+    <!-- Disable some rules that conflict with WordPress style -->
+    <rule ref="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid">
+        <severity>0</severity>
+    </rule>
+    <rule ref="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Disable file naming convention (PSR-4 requires class-name.php) -->
+    <rule ref="WordPress.Files.FileName">
+        <severity>0</severity>
+    </rule>
+    <rule ref="WordPress.WP.ClassNameCase">
+        <severity>0</severity>
+    </rule>
+</ruleset>
