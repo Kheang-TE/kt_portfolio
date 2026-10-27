@@ -10,10 +10,9 @@ parameters:
         - tests
         - vendor
         - languages
-    ignoreErrors:
-        # Constants defined in main plugin file
-        - '#Constant KT_PORTFOLIO_(VERSION|PATH|URL) not found#'
     checkMissingIterableValueType: false
     treatPhpDocTypesAsCertain: true
     bootstrapFiles:
         - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+        - vendor/autoload.php
+        - includes/Admin/Metaboxes/Metabox_Interface.php

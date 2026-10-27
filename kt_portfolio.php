@@ -49,6 +49,9 @@ function kt_portfolio_init(): void {
 
 	// Initialize CPT.
 	\KT_Portfolio\CPT\Projet_Post_Type::register();
+
+	// Initialize Metaboxes.
+	\KT_Portfolio\Admin\Metaboxes\Metabox_Registry::register();
 }
 
 // Hook into WordPress.
