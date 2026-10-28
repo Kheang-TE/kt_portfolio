@@ -50,6 +50,9 @@ function kt_portfolio_init(): void {
 	// Initialize CPT.
 	\KT_Portfolio\CPT\Projet_Post_Type::register();
 
+	// Initialize Taxonomy.
+	\KT_Portfolio\CPT\Projet_Taxonomy::register();
+
 	// Initialize Metaboxes.
 	\KT_Portfolio\Admin\Metaboxes\Metabox_Registry::register();
 }
@@ -59,11 +62,11 @@ add_action( 'plugins_loaded', 'kt_portfolio_init', 10 );
 
 /**
  * Activation hook - flush rewrite rules.
+ *
+ * CPT and Taxonomy are registered via 'init' hook (normal WP lifecycle).
+ * This hook only flushes rewrite rules to include new CPT/Taxonomy routes.
  */
 function kt_portfolio_activate(): void {
-	// Register CPT first so rewrite rules exist.
-	\KT_Portfolio\CPT\Projet_Post_Type::register_post_type();
-
 	flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'kt_portfolio_activate' );
