@@ -1,0 +1,30 @@
+/**
+ * Styles pour la liste d'administration des Technologies (CPT).
+ *
+ * @package KT_Portfolio
+ * @since   0.1.0
+ */
+
+/* Colonne Logo - largeur adaptée pour les miniatures 40x40 */
+.wp-list-table .column-logo {
+	width: 60px;
+	min-width: 60px;
+	max-width: 60px;
+	text-align: center;
+}
+
+/* Alignement du titre de la colonne Logo */
+.wp-list-table .column-logo th {
+	text-align: center;
+}
+
+/* Assurer que l'image ne dépasse pas la colonne */
+.wp-list-table .column-logo img.kt-technologie-logo-admin {
+	max-width: 40px;
+	height: auto;
+}
+
+/* Espacement pour l'icône placeholder (dashicon) */
+.wp-list-table .column-logo .dashicons-admin-media {
+	line-height: 40px;
+}

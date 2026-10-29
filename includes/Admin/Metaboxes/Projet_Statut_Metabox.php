@@ -85,7 +85,9 @@ final class Projet_Statut_Metabox implements Metabox_Interface {
 		$options = self::get_statut_options();
 		?>
 		<div class="kt-projet-statut-wrap">
-			<label for="kt_projet_statut" class="screen-reader-text"><?php esc_html_e( 'Statut du projet', 'kt-portfolio' ); ?></label>
+			<label for="kt_projet_statut" class="screen-reader-text">
+				<?php esc_html_e( 'Statut du projet', 'kt-portfolio' ); ?>
+			</label>
 			<select id="kt_projet_statut"
 					name="kt_projet_statut"
 					class="kt-projet-statut-select">
@@ -99,9 +101,6 @@ final class Projet_Statut_Metabox implements Metabox_Interface {
 				<?php esc_html_e( 'État d\'avancement du projet.', 'kt-portfolio' ); ?>
 			</p>
 		</div>
-		<style>
-			.kt-projet-statut-select { width: 100%; padding: 8px; font-size: 14px; box-sizing: border-box; }
-		</style>
 		<?php
 	}
 

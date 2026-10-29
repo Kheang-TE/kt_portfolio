@@ -1,0 +1,68 @@
+/**
+ * Styles pour la metabox Technologies du projet (admin).
+ *
+ * @package KT_Portfolio
+ * @since   0.1.0
+ */
+
+.kt-projet-technologies-wrap {
+	margin-top: 8px;
+}
+
+.kt-projet-technologies-wrap .description {
+	margin-bottom: 8px;
+}
+
+.kt-technologies-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+	.kt-technologies-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.kt-technologies-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.kt-technology-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 12px;
+	background: #f6f7f7;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.kt-technology-item:hover {
+	background: #eef;
+	border-color: #aad;
+}
+
+.kt-technology-item input[type="checkbox"] {
+	margin: 0;
+	width: 16px;
+	height: 16px;
+	accent-color: #0073aa;
+}
+
+.kt-technology-thumbnail img {
+	border-radius: 3px;
+	object-fit: cover;
+}
+
+.kt-technology-title {
+	font-size: 13px;
+	font-weight: 500;
+	color: #1d2327;
+}

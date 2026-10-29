@@ -15,4 +15,5 @@ parameters:
     bootstrapFiles:
         - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
         - vendor/autoload.php
+        - kt_portfolio.php
         - includes/Admin/Metaboxes/Metabox_Interface.php

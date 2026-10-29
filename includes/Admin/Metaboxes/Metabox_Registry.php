@@ -77,6 +77,7 @@ final class Metabox_Registry {
 		$metaboxes = array(
 			\KT_Portfolio\Admin\Metaboxes\Projet_Liens_Metabox::class,
 			\KT_Portfolio\Admin\Metaboxes\Projet_Statut_Metabox::class,
+			\KT_Portfolio\Admin\Metaboxes\Projet_Technologies_Metabox::class,
 		);
 
 		return $metaboxes;

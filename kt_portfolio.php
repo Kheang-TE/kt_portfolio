@@ -47,14 +47,19 @@ function kt_portfolio_init(): void {
 	// Load text domain for translations.
 	load_plugin_textdomain( 'kt-portfolio', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-	// Initialize CPT.
+	// Initialize CPTs.
 	\KT_Portfolio\CPT\Projet_Post_Type::register();
+	\KT_Portfolio\CPT\Technologie_Post_Type::register();
 
 	// Initialize Taxonomy.
 	\KT_Portfolio\CPT\Projet_Taxonomy::register();
+	\KT_Portfolio\CPT\Technologie_Taxonomy::register();
 
 	// Initialize Metaboxes.
 	\KT_Portfolio\Admin\Metaboxes\Metabox_Registry::register();
+
+	// Initialize Assets.
+	\KT_Portfolio\Assets\Assets::register();
 }
 
 // Hook into WordPress.

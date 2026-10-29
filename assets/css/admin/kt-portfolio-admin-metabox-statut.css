@@ -1,0 +1,23 @@
+/**
+ * Styles pour la metabox Statut du projet (admin).
+ *
+ * @package KT_Portfolio
+ * @since   0.1.0
+ */
+
+.kt-projet-statut-wrap {
+	margin-top: 8px;
+}
+
+.kt-projet-statut-select {
+	width: 100%;
+	padding: 8px;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+.kt-projet-statut-wrap .description {
+	margin-top: 6px;
+	font-size: 12px;
+	color: #666;
+}
